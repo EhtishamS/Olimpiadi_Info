@@ -1,0 +1,34 @@
+Floyd's Algorithm to find duplicate numbers.
+
+The constraints:
+- Lenghts of Array in n+1.
+- Numbers in the array goes from 1 to n.
+- Only one duplicate number, and it can repeated many times.
+- Time complexity smaller than 0(n).
+- The Array must not be modified. 
+- Space complesity 0(1).
+
+3 possible methods:
+
+1) 	Method: sort & scan.
+	Time: o(n log n).
+	space: o(1).
+	Issue: Array is modified.
+
+2)	Method: Hashmap(set)
+	Time: o(n).
+	space: o(n).
+	Issue: Space is extended.
+
+3) 	Method: Floyd.
+	Explanation: We have to pointer hare & tortorise both start from the same place. The tortorise will go slow but hare will go twice as fast from the tortorise. 
+	After sometime the hare is going to catch the tortorise.
+
+	tortorise = num[tortorise];
+	hare = num[num[hare]];
+
+	There are usually 2 phase:
+
+	First fase where hare is faster then the tortorise and second where both of them have same speed, but tortorise start from the beginning and hare starts from where he caught tortorise.
+
+	
